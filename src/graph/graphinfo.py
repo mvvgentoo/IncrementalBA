@@ -6,13 +6,14 @@ if __name__ == '__main__':
     pass    
 else:   
     from ..containers.matrix import Matrix
+    from ..containers.datatypes import DataTypes
 
 
 class GraphInfo:
     def __init__(self, n):
         self.dim = n
-        self.AdjacencyTable = Matrix.zeros(n,n, np.bool)
-        self.WeightTable = Matrix.zeros(n,n, np.float64)
+        self.AdjacencyTable = Matrix.zeros(n,n, DataTypes.BoolType() )
+        self.WeightTable = Matrix.zeros(n,n, DataTypes.DoubleType() )
 
     def AddEdge(self,u,v,weight):        
         [i,j] = [u,v] if u < v else [v,u]
@@ -33,3 +34,4 @@ class GraphInfo:
             return self.AdjacencyTable[u,v]
         else:
             return self.AdjacencyTable[v,u]
+            

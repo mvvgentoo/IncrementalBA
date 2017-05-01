@@ -33,6 +33,21 @@ class DataInfoWrapper:
         if self.imageNames[i] == "":
             self.imageNames[i] = name
         
+    def GetNumberOfImages(self):
+        return self.numImg
+        
+    def GetTable(self):
+        return self.table
+    
+    def GetGraphInfo(self):
+        return self.graph
+        
+    def GetImageNameList(self):
+        return self.imageNames
+        
+    def GetTableElement(self, i, j):
+        return self.table[i,j]
+        
 class ReadingAssistant:
     @classmethod
     def GetNumImagesInFile(cls,filename):

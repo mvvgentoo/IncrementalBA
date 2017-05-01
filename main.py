@@ -5,14 +5,16 @@ from src.io import *
 from src.graph import *
 from src.containers import *
 
-import os;
+import os
+import sys
 
 print(os.getcwd() )
 
-
-filename = "Enter filename here"
+filename = sys.argv[1]
 
 dataInfo = ReadingAssistant.FillDataStructures(filename)
 
-print(len(dataInfo.table[0,1] ) )
-print(dataInfo.table[0,1] )
+tbl = dataInfo.GetTableElement(0,1)
+
+print(len(tbl))
+print(tbl)
