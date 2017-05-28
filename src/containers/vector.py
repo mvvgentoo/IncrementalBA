@@ -23,4 +23,12 @@ class Vector:
        
    def GetArray(self):
        return self.dat
-       
+
+   def norm(self, n):
+       return np.linalg.norm(self.dat, n)
+
+   def euclidNorm(self):
+       return
+
+   def onScalar(self, scalar):
+       return Vector(np.dot(self.dat, scalar))

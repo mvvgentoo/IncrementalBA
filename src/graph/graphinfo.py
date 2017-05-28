@@ -2,7 +2,7 @@
 
 import numpy as np
 
-if __name__ == '__main__':
+if __name__ == '__main__':    
     pass    
 else:   
     from ..containers.matrix import Matrix
