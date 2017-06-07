@@ -34,4 +34,8 @@ class GraphInfo:
             return self.AdjacencyTable[u,v]
         else:
             return self.AdjacencyTable[v,u]
-            
+    
+    def GetWeightMatrixRef(self):
+        return self.WeightTable
+    
+    

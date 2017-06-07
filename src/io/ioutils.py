@@ -76,7 +76,7 @@ class ReadingAssistant:
             right = data["right"]["num"]
             print(lst)
             table[left, right] = lst
-            graph.AddEdge(left, right, len(lst))
+            graph.AddEdge(left, right, 1.0 / len(lst))
 
             lst=[]
             
@@ -106,7 +106,7 @@ class ReadingAssistant:
         
         for val in dataarr:
             dataInfoWrapper.SetTable(val[0], val[1], val[4])
-            dataInfoWrapper.SetGraphEdge(val[0], val[1], len(val[4]) )
+            dataInfoWrapper.SetGraphEdge(val[0], val[1], 1.0 / len(val[4]) )
             dataInfoWrapper.AddImageName(val[0], val[2])                     
             dataInfoWrapper.AddImageName(val[1], val[3])                     
             

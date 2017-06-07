@@ -16,5 +16,13 @@ dataInfo = ReadingAssistant.FillDataStructures(filename)
 
 tbl = dataInfo.GetTableElement(0,1)
 
-print(len(tbl))
-print(tbl)
+graphAnalysisTool=GraphAnalysis()
+
+components = graphAnalysisTool.GetAllConnectedComponent(dataInfo.GetGraphInfo())
+for comp in components:
+   print(comp)
+
+paths = graphAnalysisTool.GetOptimalPathsFrom(dataInfo.GetGraphInfo(), 0)   
+for key in paths.keys():
+   print(key, paths[key])
+    
